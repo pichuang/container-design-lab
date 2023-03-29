@@ -1,0 +1,8 @@
+FROM docker.io/library/ubuntu:20.04
+
+USER 1001
+
+ADD motd /etc/motd
+RUN echo "cat /etc/motd" >> ~/.bashrc
+
+CMD ["/bin/bash", "-l"]
